@@ -8,3 +8,9 @@ class TestBasics(unittest.TestCase):
 	def test_sub(self):
 		result = rpn.calculate("1 1 -")
 		self.assertEqual(0, result)
+	def test_mult(self):
+		result = rpn.calculate("10 5 *")
+		self.assertEqual(50, result)
+	def test_div(self):
+		result = rpn.calculate("10 50 /")
+		self.assertEqual(5, result)
