@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-calculate(arg):
+def calculate(arg):
     pass
 
 def main():
