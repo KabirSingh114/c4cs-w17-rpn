@@ -1,7 +1,23 @@
 #!/usr/bin/env python3
 
+import operator
+
+operators = {
+	'+': operator.add,
+	'-': operator.sub
+}
+
 def calculate(arg):
-    pass
+	List = list()
+	for operand in arg.split():
+		try:
+			operand = float(operand)
+			List.append(operand)
+		except ValueError:
+			num1 = List.pop()
+			num2 = List.pop()
+			List.append(operators[operand](num1, num2))
+	return List.pop()
 
 def main():
     while True:
