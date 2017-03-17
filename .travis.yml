@@ -4,6 +4,10 @@ python:
 
 install: 
 - pip install -r requirements.txt
+- pip install coveralls
 
 script: 
-- python test_rpn.py
+coverage run --source=c4cs-w17-rpn test_rpn.py
+
+after_success:
+ coveralls
