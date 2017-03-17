@@ -7,7 +7,8 @@ install:
 - pip install coveralls
 
 script: 
-coverage run --source=c4cs-w17-rpn test_rpn.py
+coverage run --source=c4cs-w17-rpn test_rpn.py test
+COVERALLS_REPO_TOKEN=oz0CcHv3KRqPzWSshGvupts8uT8EqpQ0C coveralls
 
 after_success:
  coveralls
